@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: landing-service
+  namespace: landing
+  labels: 
+    tier: frontend
+    app: landing 
+spec: 
+  type: LoadBalancer
+  loadBalancerIP: 10.100.15.155
+  selector: 
+    type: frontend
+    app: landing 
+  ports: 
+  - port: 80 
+    targetPort: 80 

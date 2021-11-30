@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: landing-service
+  namespace: landing
+  labels: 
+    tier: frontend
+    app: landing 
+spec: 
+  selector: 
+    type: frontend
+    app: landing 
+  ports: 
+  - port: 80 
+    targetPort: 80 
