@@ -11,7 +11,10 @@ spec:
   tls: 
   - hosts:
     - www.gpastor.net
-    secretName: gpastor-wildcard 
+    secretName: gpastor-wildcard
+  - hosts:
+    - gpastor.net
+    secretName: gpastor 
   rules: 
   - host: www.gpastor.net
     http: 
@@ -22,4 +25,14 @@ spec:
           service: 
             name: landing-service 
             port: 
+              number: 80
+  - host: gpastor.net
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: landing-service
+            port:
               number: 80
