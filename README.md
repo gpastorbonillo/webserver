@@ -12,4 +12,5 @@ Webserver-lb-yml exposes the replica set through an allocated metal-lb owned IP,
 
 Webserver-ingress.yml and webserver-root-ingress.yml expose the replica set through nginx ingress controller, in two domain names, and exposes it outside thtough another metal-lb owned IP, wich then is exposed to the internet.
 
-It presents certbot generated certs for both of them. 
+It presents certbot generated certs for both of them, wich are added manually as secrets. 
+
