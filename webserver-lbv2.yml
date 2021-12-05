@@ -6,7 +6,7 @@ metadata:
   labels: 
     tier: frontend
     app: landing 
-spec: 
+spec:
   selector: 
     type: frontend
     app: landing 
